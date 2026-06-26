@@ -1,6 +1,6 @@
 (function () {
   'use strict';
-  var BOT_URL = 'https://bot-balidao.up.railway.app';
+    var BOT_URL = 'https://alba-bot-balidao-production.up.railway.app';
   var BOT_NAME = 'Alba';
   var BOT_AVATAR = '🛡️';
   var PRIMARY = '#F4600C';
