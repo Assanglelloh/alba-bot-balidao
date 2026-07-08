@@ -221,4 +221,16 @@ app.get('/stats', (_, res) => {
   <div class="cards">
     <div class="card"><h2>${stats.totalSessions}</h2><p>Sessions uniques</p></div>
     <div class="card"><h2>${stats.totalMessages}</h2><p>Messages traités</p></div>
-    <div class="card"><h2>${stats.co
+    <div class="card"><h2>${stats.conversations.length}</h2><p>Conversations récentes</p></div>
+  </div>
+  <p style="color:#888;font-size:.8rem">Bot démarré le ${stats.startedAt} — Stats remises à zéro à chaque redémarrage</p>
+  <table><thead><tr><th>Heure</th><th>Session</th><th>Client</th><th>Alba</th></tr></thead>
+  <tbody>${rows || '<tr><td colspan="4" style="color:#888">Aucune conversation pour l\'instant</td></tr>'}</tbody>
+  </table></body></html>`);
+});
+
+// ─── DÉMARRAGE ────────────────────────────────────────────────────────────────
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+  console.log(`✅ Alba Bot Balidao en ligne → port ${PORT}`);
+});
